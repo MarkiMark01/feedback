@@ -7,10 +7,10 @@ export const Statistic = ({ stats, total, percentage }) => {
             {isPositive ? (
                 <>
                     {Object.keys(stats).map((name, i) => (
-                        <p key={i}>{name}: {stats[name]}</p>
+                        <p className="feedback" key={i}>{name}: {stats[name]}</p>
                     ))}
-                    <p>Total: {total}</p>
-                    <p>Positive feedback: {percentage}%</p>
+                    <p className="feedback">Total: {total}</p>
+                    <p className="feedback">Positive feedback: {percentage}%</p>
                 </>
             ) : (<p>"There is no feedback"</p>)}
         </>
