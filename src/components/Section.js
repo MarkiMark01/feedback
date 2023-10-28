@@ -2,7 +2,7 @@ import React from "react";
 
 export const Section = ({ message }) => {
     return (
-        <div>{message}</div>
+        <h3>{message}</h3>
     )
-}
-export default Section;
+};
+

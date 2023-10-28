@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Feedback from './components/Feedback';
 import Statistic from './components/Statistic';
-import Section from './components/Section';
+import { Section } from './components/Section';
+import './components/styles.css';
 
 function App() {
 
@@ -16,21 +17,23 @@ function App() {
   };
 
   const countTotalFeedback = () => {
-    const { good, neutral, bad } = state
-    return good + neutral + bad
-  }
+    const { good, neutral, bad } = feedback;
+    return good + neutral + bad;
+  };
 
-  countPositiveFeedbackPercentage = () => Math.round((this.state.good / this.countTotalFeedback()) * 100) || 0;
+  const countPositiveFeedbackPercentage = () => Math.round((feedback.good / countTotalFeedback()) * 100) || 0;
 
 
   return (
     <div className="App">
-      <Feedback handleClick={handleClick} option={state} />
-      <Section message={"Statistic"} />
-      <Statistic stats={state} total={countTotalFeedback()} percentage={countPositiveFeedbackPercentage()} />
-
+      <div className='main-container'>
+        <Feedback handleClick={handleClick} option={feedback} />
+        <Section message="Your feedback is important to us" />
+        <Statistic stats={feedback} total={countTotalFeedback()} percentage={countPositiveFeedbackPercentage()} />
+      </div>
     </div>
   );
 }
 
 export default App;
+

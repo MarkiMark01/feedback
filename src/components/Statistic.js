@@ -12,7 +12,7 @@ export const Statistic = ({ stats, total, percentage }) => {
                     <p>Total: {total}</p>
                     <p>Positive feedback: {percentage}%</p>
                 </>
-            ) : (<div>"There is no feedback"</div>)}
+            ) : (<p>"There is no feedback"</p>)}
         </>
     );
 };
