@@ -34,12 +34,19 @@
   font-size: 18px;
   font-weight: 600;
   color: rgb(3, 31, 31);
-  background-color: rgb(236, 236, 236);
+  /* color: rgba(236, 236, 236, 0.849); */
+  background-color: orange;
   border: none;
 }
-.button:hover {
+.button:first-child {
+  background-color: green;
+}
+.button:last-child {
   background-color: rgba(255, 0, 0, 0.877);
-  color: rgb(236, 236, 236);
+}
+.button:hover {
+  background-color: rgb(236, 236, 236);
+  color: rgb(3, 31, 31);
 }
 .feedback {
   margin: 10px;
